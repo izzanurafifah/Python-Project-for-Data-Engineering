@@ -15,7 +15,7 @@ def extract_from_json(file_to_process):
     return dataframe 
   
 def extract_from_xml(file_to_process): 
-    dataframe = pd.DataFrame(columns="car_model", "year_of_manufacture", "price", "fuel"]) 
+    dataframe = pd.DataFrame(columns=["car_model", "year_of_manufacture", "price", "fuel"]) 
     tree = ET.parse(file_to_process) 
     root = tree.getroot() 
     for row in root: 
